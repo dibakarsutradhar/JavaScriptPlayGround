@@ -1,3 +1,8 @@
-var name = 'Dibakar';
+var firstName = 'Dibakar';
+console.log(firstName);
 
-console.log(name);
+var lastName = 'Sutradhar';
+console.log(lastName);
+
+var age = 21;
+console.log(age);
