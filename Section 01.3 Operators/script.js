@@ -21,3 +21,7 @@ ageOni *= 2;
 
 console.log(ageAqeel);
 console.log(ageOni);
+
+ageAqeel--;
+
+console.log(ageAqeel);
