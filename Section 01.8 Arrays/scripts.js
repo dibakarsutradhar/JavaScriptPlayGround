@@ -16,3 +16,9 @@ console.log(John);
 John.pop();					// .pop() - Remove element from the end of an Array
 John.shift();				// .shift() - Remove element from the beginning of an Array
 console.log(John);
+
+alert(John.indexOf('Smith'));	//	.indexOf - Checks the element is in the array or not
+
+if(John.indexOf('teacher') === -1){
+	console.log('John is not a teacher');
+}
