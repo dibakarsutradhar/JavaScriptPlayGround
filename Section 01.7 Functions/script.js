@@ -13,7 +13,14 @@ var ageJohn = calculateAge(1997);
 function yearsUntilRetirement(name, year){
 	var age = calculateAge(year);
 	var retirement = 65 - age;
-	console.log (retirement);
+
+	if(retirement >= 0){
+		console.log (name + ' retires in ' + retirement + ' years');
+	} else {
+		console.log (name + ' is already retired');
+	}
 }
 
 yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('Marry', 1970);
+yearsUntilRetirement('Oblak', 1947);
