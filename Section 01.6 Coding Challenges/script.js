@@ -17,10 +17,12 @@ console.log(name2 + 's Score is: ' + score2);
 var score3 = height3 + 5 * age3;
 console.log(name3 + 's Score is: ' + score3);
 
-if(score1 > score2){
+if(score1 > score2 && score1 > score3){
 	console.log(name1 + ' is the Winner');
-} else if(score2 > score1) {
+} else if(score2 > score1 && score2 > score3) {
 	console.log(name2 + ' is the Winner');
-} else if(score1 === score2){
+} else if(score3 > score1 && score3 > score2) {
+	console.log(name3 + ' is the Winner');
+} else {
 	console.log('This game is a Draw');
 }
