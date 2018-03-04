@@ -5,10 +5,13 @@ var john = {
 	job: 'Doctor',
 	isMarried: false,
 	family: ['Jane', 'Mark', 'Bob'],
-	calculateAge: function(yearOfBirth){
-		return 2018 - yearOfBirth;
+	calculateAge: function(){
+		return 2018 - this.yearOfBirth;
 	}
 };
 
 console.log(john);
 console.log(john.family);
+console.log(john.calculateAge());
+
+var age = john.calculateAge();
