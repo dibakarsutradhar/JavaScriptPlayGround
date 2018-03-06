@@ -1,0 +1,15 @@
+body {
+	background-color: #F1DA4E;
+}
+
+h1 {
+	background-color: white;
+	text-align: center;
+	font-family: sans-serif;
+	font-style: bold;
+}
+
+img {
+	padding: 2px;
+	border-image: 2px;
+}
