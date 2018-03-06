@@ -10,15 +10,5 @@ h1 {
 }
 
 .container {
-	width: 400px;
-	height: 400px;
-	overflow: hidden;
-	background-size: cover;
-	background-position: center center;
+	text-align: center;
 }
-/*
-.container img {
-	max-width: 150%;
-	height: auto;
-}
-*/
