@@ -1,4 +1,4 @@
-// Hoisting
+// Hoisting with FUNCTION
 
 calculateAge(1965);
 
@@ -14,3 +14,21 @@ var retirement= function(year){						// function Expression
 }
 
 retirement(1990);
+
+
+
+
+// Hoisting with VARIABLES
+
+
+console.log(age); 						// This will result in Undefined, because JS knows there's age variables but not defined yet
+var age = 23;							// Global Variable
+
+function foo(){
+	console.log(age);
+	var age = 65;
+	console.log(age);
+}
+
+foo();
+console.log(age);
