@@ -7,3 +7,10 @@ function arrayCalc (arr, fn) {
 	}
 	return arrRes;
 }
+
+function calculateAge (el) {
+	return 2018 - el;
+}
+
+var ages = arrayCalc (years, calculateAge);
+console.log (ages);
