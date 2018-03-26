@@ -26,3 +26,53 @@ retirementIceland(1990);
 ///// HOW CLOSURES WORKS /////
 
 /* An Inner Function Has Always Access to the Variables and Parameters of its Outer Function, Even After the Outer Function has Returend. */
+
+
+
+//// CODING CHALLANGES ////
+
+/// WRITE THE SAME FUNCTIONS FROM SECTION 3.4 USING CLOSURES ///
+
+// function for Interview Question
+
+/*function interviewQuestion(job){
+	if(job === 'teacher'){
+		return function (name) {
+			console.log(name + ', Can you please explain what UI Design is?');
+		}
+	} else if(job === ' designer') {
+		return function (name) {
+			console.log(name + ', What do you teach?');
+		}
+	} else {
+		return function (name) {
+			console.log(name + ', What do you do?');
+		}
+	}
+}
+
+var teacherQuestion = interviewQuestion('teacher');
+var designerQuestion = interviewQuestion('designer');
+
+teacherQuestion('Mark');
+designerQuestion('John');
+
+interviewQuestion('teacher')('Anthony');
+*/
+
+
+// Appling CLOUSERS
+
+function interviewQuestion (job){
+	return function (name) {
+		if (job === 'teacher') {
+			console.log(name + ', What do you teach?');
+		} else if (job === 'designer') {
+			console.log(name + ', Can you please explain what UI Design is?');
+		} else {
+			console.log(name + ', What do you do?');
+		}
+	}
+}
+
+interviewQuestion('teacher')('John');
