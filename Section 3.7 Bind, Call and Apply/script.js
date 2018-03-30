@@ -1,4 +1,4 @@
-// Bind, Call and 
+// Bind, Call and Apply
 
 var john = {
 	name: 'John',
@@ -11,6 +11,14 @@ var john = {
 			console.log('Hey! What\'s up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
 		}
 	}
-}
+};
+
+var emily = {
+	name: 'Emily',
+	age: 31,
+	job: 'Dancer'
+};
 
 john.presentation('casual', 'morning');
+
+john.presentation.call(emily, 'formal', 'afternoon');								// Method Borrowing		-- Call Method
