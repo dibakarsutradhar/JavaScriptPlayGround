@@ -31,3 +31,32 @@ johnCasual('night');														// Bind allows us to preset some arguments 	--
 
 var emilyFormal = john.presentation.bind(emily, 'formal');
 emilyFormal('morning');
+
+
+// Project Example
+
+var years = [1990, 1995, 1997, 2001, 2005, 1998, 1999];
+
+function arrayCalc (arr, fn) {												// generic function
+	var arrRes = [];
+	for (var i = 0; i < arr.length; i++){
+		arrRes.push(fn(arr[i]));
+	}
+	return arrRes;
+}
+
+function calculateAge (el) {												// callback function
+	return 2018 - el;
+}
+
+function isFullAges (limit, el) {													// callback function
+	return el >= limit;
+}
+
+var ages = arrayCalc(years, calculateAge);
+
+var fullJapan = arrayCalc(ages, isFullAges.bind(this, 20));
+
+console.log(ages);
+console.log(fullJapan);
+
