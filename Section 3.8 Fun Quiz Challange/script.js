@@ -47,6 +47,14 @@ Question.prototype.displayQuestion = function() {										// Displaying Questio
 	}
 }
 
+Question.prototype.checkAnswer = function(ans) {										// Validating Answer 			--- Task 6
+	if (ans === this.correct){
+		console.log('Correct Answer.');
+	} else {
+		console.log('Wrong Answer. Try Again.');
+	}
+}
+
 var q1 = new Question('Is JavaSript the coolest programming language in the world?',	// First question 				--- Task 2
 	['Yes','No'],
 	0);
@@ -65,5 +73,7 @@ var n = Math.floor(Math.random() * questions.length);									// Random Question
 
 questions[n].displayQuestion();															// Selecting Random question 	--- Task 4
 
+var answer = parseInt(prompt('Please select the correct answer: '));					// Asking for correct ans 		--- Task 5
 
+questions[n].checkAnswer(answer);
 
