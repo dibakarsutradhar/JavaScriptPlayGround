@@ -70,14 +70,21 @@ c) correct answer (I would use a number for this)
 
 	var questions = [q1, q2, q3];															// Storing questions 			--- Task 3
 
-	var n = Math.floor(Math.random() * questions.length);									// Random Question Genrate 		--- Task 4
+	function nextQuestion(){																// Next Random Question 		--- Task 8
 
-	questions[n].displayQuestion();															// Selecting Random question 	--- Task 4
+		var n = Math.floor(Math.random() * questions.length);								// Random Question Genrate 		--- Task 4
 
-	var answer = parseInt(prompt('Please select the correct answer: '));					// Asking for correct ans 		--- Task 5
+		questions[n].displayQuestion();														// Selecting Random question 	--- Task 4
 
-	questions[n].checkAnswer(answer);														// Checking Answer 				--- Task 6
+		var answer = prompt('Please select the correct answer. Type exit to quit the game');// Asking for correct ans 		--- Task 5
 
+		if (answer !== 'exit') {															// Exit option to quit game 	--- Task 9
+			questions[n].checkAnswer(parseInt(answer));										// Checking Answer 				--- Task 6
+			nextQuestion();																	// Calling the function again 	--- Task 8
+		}	
+	}
+	nextQuestion();
+	
 })();
 
 
