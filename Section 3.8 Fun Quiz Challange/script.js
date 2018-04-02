@@ -33,47 +33,51 @@ c) correct answer (I would use a number for this)
 */
 
 
-function Question(question, answers, correct) {											// Function constructor 		--- Task 1
+(function() {																				// Made all code Private 		--- Task 7
+	function Question(question, answers, correct) {											// Function constructor 		--- Task 1
 	this.question = question;
 	this.answers = answers;
 	this.correct = correct;
 }
 
-Question.prototype.displayQuestion = function() {										// Displaying Question 			--- Task 4
-	console.log(this.question);
+	Question.prototype.displayQuestion = function() {										// Displaying Question 			--- Task 4
+		console.log(this.question);
 
-	for (var i = 0; i < this.answers.length; i++) {										// Possible Answers 			--- Task 4
-		console.log(i + ': ' + this.answers[i]);
+		for (var i = 0; i < this.answers.length; i++) {										// Possible Answers 			--- Task 4
+			console.log(i + ': ' + this.answers[i]);
+		}
 	}
-}
 
-Question.prototype.checkAnswer = function(ans) {										// Validating Answer 			--- Task 6
-	if (ans === this.correct){
-		console.log('Correct Answer.');
-	} else {
-		console.log('Wrong Answer. Try Again.');
+	Question.prototype.checkAnswer = function(ans) {										// Validating Answer 			--- Task 6
+		if (ans === this.correct){
+			console.log('Correct Answer.');
+		} else {
+			console.log('Wrong Answer. Try Again.');
+		}
 	}
-}
 
-var q1 = new Question('Is JavaSript the coolest programming language in the world?',	// First question 				--- Task 2
-	['Yes','No'],
-	0);
+	var q1 = new Question('Is JavaSript the coolest programming language in the world?',	// First question 				--- Task 2
+		['Yes','No'],
+		0);
 
-var q2 = new Question('What is the capital of Bangladesh?',								// Second question 				--- Task 2
-	['Chittagong', 'Comilla', 'Dhaka'],
-	2);
+	var q2 = new Question('What is the capital of Bangladesh?',								// Second question 				--- Task 2
+		['Chittagong', 'Comilla', 'Dhaka'],
+		2);
 
-var q3 = new Question('What is the currency name of Bangladesh?',						// Third Question 				--- Task 2
-	['USD', 'TAKA', 'BTC', 'BCH', 'BDT'],
-	4);
+	var q3 = new Question('What is the currency name of Bangladesh?',						// Third Question 				--- Task 2
+		['USD', 'TAKA', 'BTC', 'BCH', 'BDT'],
+		4);
 
-var questions = [q1, q2, q3];															// Storing questions 			--- Task 3
+	var questions = [q1, q2, q3];															// Storing questions 			--- Task 3
 
-var n = Math.floor(Math.random() * questions.length);									// Random Question Genrate 		--- Task 4
+	var n = Math.floor(Math.random() * questions.length);									// Random Question Genrate 		--- Task 4
 
-questions[n].displayQuestion();															// Selecting Random question 	--- Task 4
+	questions[n].displayQuestion();															// Selecting Random question 	--- Task 4
 
-var answer = parseInt(prompt('Please select the correct answer: '));					// Asking for correct ans 		--- Task 5
+	var answer = parseInt(prompt('Please select the correct answer: '));					// Asking for correct ans 		--- Task 5
 
-questions[n].checkAnswer(answer);
+	questions[n].checkAnswer(answer);														// Checking Answer 				--- Task 6
+
+})();
+
 
