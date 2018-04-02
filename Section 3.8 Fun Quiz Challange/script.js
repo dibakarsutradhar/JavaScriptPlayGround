@@ -33,22 +33,37 @@ c) correct answer (I would use a number for this)
 */
 
 
-function Question(question, answers, correct) {											// Function constructor 	--- Task 1
-	this question = question;
+function Question(question, answers, correct) {											// Function constructor 		--- Task 1
+	this.question = question;
 	this.answers = answers;
 	this.correct = correct;
 }
 
-var q1 = new Question('Is JavaSript the coolest programming language in the world?',	// First question 			--- Task 2
+Question.prototype.displayQuestion = function() {										// Displaying Question 			--- Task 4
+	console.log(this.question);
+
+	for (var i = 0; i < this.answers.length; i++) {										// Possible Answers 			--- Task 4
+		console.log(i + ': ' + this.answers[i]);
+	}
+}
+
+var q1 = new Question('Is JavaSript the coolest programming language in the world?',	// First question 				--- Task 2
 	['Yes','No'],
 	0);
 
-var q2 = new Question('What is the capital of Bangladesh?',								// Second question 			--- Task 2
+var q2 = new Question('What is the capital of Bangladesh?',								// Second question 				--- Task 2
 	['Chittagong', 'Comilla', 'Dhaka'],
 	2);
 
-var q3 = new Question('What is the currency name of Bangladesh?',						// Third Question 			--- Task 2
+var q3 = new Question('What is the currency name of Bangladesh?',						// Third Question 				--- Task 2
 	['USD', 'TAKA', 'BTC', 'BCH', 'BDT'],
 	4);
+
+var questions = [q1, q2, q3];															// Storing questions 			--- Task 3
+
+var n = Math.floor(Math.random() * questions.length);									// Random Question Genrate 		--- Task 4
+
+questions[n].displayQuestion();															// Selecting Random question 	--- Task 4
+
 
 
