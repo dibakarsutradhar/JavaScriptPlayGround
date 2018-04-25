@@ -18,3 +18,10 @@ const familyMeena = ['Meena', 'Raju', 'Mithu'];
 const familyGopal = ['Gopal', 'Montri', 'Moharaj'];
 const bigFamily = [...familyMeena, 'Biggani', ...familyGopal];
 console.log(bigFamily);
+
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h, ...boxes];
+
+Array.from(all).forEach(cur => cur.style.color = 'purple');
