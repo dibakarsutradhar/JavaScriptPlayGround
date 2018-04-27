@@ -15,7 +15,14 @@ console.log(question.get('question'));
 console.log(question.size);
 
 if(question.has(4)) {
-    question.delete(4);
+    //question.delete(4);
+    console.log('Testing Has');
 }
 
 // question.clear();
+
+question.forEach((value, key) => console.log(`This is ${key} and it's set to ${value}`));
+
+for(let [key, value] of question.entries()) {
+    console.log(`This is ${key} and it's set to ${value}`);
+}
