@@ -29,6 +29,11 @@ class Person6 {
         var age = new Date().getFullYear - this.yearOfBirth;
         console.log(age);
     }
+
+    static greeting() {
+        console.log('Hey There!');
+    }
 }
 
 const john6 = new Person6('John', 1990, 'Teacher');
+Person6.greeting();
