@@ -61,3 +61,30 @@ class Street extends Element {
         console.log(`${this.name}, build in ${this.buildYear}, is a ${classification.get(this.size)} street.`);
     }
 }
+
+const allParks = [new Park('Green Park', 1987, 0.2, 315),
+                new Park('National Park', 1984, 2.5, 3517),
+                new Park('Linkin Park', 2000, 1.9, 2900)];
+
+const allStreets = [new Street('Gouripur Street', 1984, 1.1, 4),
+                new Street('Vulirpar Street', 1994, 0.4, 2),
+                new Street('Bazar Street', 1947, 0.9),
+                new Street('Pennai Street', 1974, 4.5, 5)];
+
+
+function reportPark(p) {
+    console.log('----- PARKS REPORT -----');
+    
+    // density
+
+    // average age
+
+    // park name with trees more than 1000
+}
+
+function reportStreet(s) {
+
+}
+
+reportPark(allParks);
+reportStreet(allStreets);
