@@ -64,22 +64,36 @@ class Street extends Element {
 
 const allParks = [new Park('Green Park', 1987, 0.2, 315),
                 new Park('National Park', 1984, 2.5, 3517),
-                new Park('Linkin Park', 2000, 1.9, 2900)];
+                new Park('Linkin Park', 2000, 1.9, 900)];
 
 const allStreets = [new Street('Gouripur Street', 1984, 1.1, 4),
                 new Street('Vulirpar Street', 1994, 0.4, 2),
                 new Street('Bazar Street', 1947, 0.9),
                 new Street('Pennai Street', 1974, 4.5, 5)];
 
+function calc(arr) {
+
+    const sum = arr.reduce((prev, cur, index) => prev + cur, 0);
+
+    return [sum, sum / arr.length];
+
+}
 
 function reportPark(p) {
     console.log('----- PARKS REPORT -----');
     
     // density
+    p.forEach(el => el.densityTree());
 
     // average age
+    const ages = p.map(el => new Date().getFullYear() - el.buildYear);
+    const [totalAge, aveAge] = calc(ages);
+    console.log(`Our ${p.length} parks have an average of ${aveAge} years`);
 
     // park name with trees more than 1000
+    const i = p.map(el => el.numTrees).findIndex(el => el >= 1000);
+    console.log(`${p[i].name} has more than 1000 trees.`);
+
 }
 
 function reportStreet(s) {
