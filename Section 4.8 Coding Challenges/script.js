@@ -80,7 +80,7 @@ function calc(arr) {
 }
 
 function reportPark(p) {
-    console.log('----- PARKS REPORT -----');
+    console.log('-----PARKS REPORT-----');
     
     // density
     p.forEach(el => el.densityTree());
@@ -97,6 +97,14 @@ function reportPark(p) {
 }
 
 function reportStreet(s) {
+    console.log('-----PARKS REPORT-----');
+
+    // Total and average length of the town's streets
+    const [totalLength, avgLength] = calc(s.map(el => el.length));
+    console.log(`Our ${s.length} streets have a total length of ${totalLength} km, with an average of ${avgLength} km.`);
+
+    // Classify Sizes
+    s.forEach(el => el.classifyStreet());
 
 }
 
