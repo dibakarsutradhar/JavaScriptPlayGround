@@ -13,4 +13,37 @@ var box5 = {
     }
 }
 
-box5.clickMe();
+//box5.clickMe();
+
+
+// ES6
+
+const box6 = {
+    color: 'green',
+    position: 1,
+    clickMe: function () {
+        document.querySelector('.green').addEventListener('click', () => {
+            var str = 'This is box number ' + this.position + ', and it is ' + this.color + '.';
+            alert(str);
+        });
+    }
+}
+
+box6.clickMe();
+
+/*
+
+                        // This something we don't want to use in our code. It's the same situation as the ES5 one.
+const box66 = {
+    color: 'green',
+    position: 1,
+    clickMe: () => {
+        document.querySelector('.green').addEventListener('click', () => {
+            var str = 'This is box number ' + this.position + ', and it is ' + this.color + '.';
+            alert(str);
+        });
+    }
+}
+
+box66.clickMe();
+*/
